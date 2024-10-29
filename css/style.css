@@ -1,0 +1,276 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap");
+
+* {
+    user-select: none;
+}
+
+html { 
+    font-family: 'Poppins', sans-serif;
+    font-size: 16px;
+    color: #fff;
+    overflow-x: hidden;
+    overscroll-behavior: none;
+    height: 100%;   
+    scroll-behavior: smooth; /* Yumuşak kaydırma */
+}
+
+.background {
+    transform: scale(1.10);
+    position: fixed;
+    z-index: -10;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    transition: transform 0.05s linear;
+    width: 100vw;
+    background: url(img/Background.jpg) no-repeat center center fixed; 
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    background-color: url(img/Background.jpg) no-repeat center center fixed; 
+}
+
+#particles-js {
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+    top: 0;
+    left: 0;
+    filter: blur(1px);
+    z-index: 0; /* Diğer içeriklerin önüne geçmesini engellemek için düşük bir z-index */
+    pointer-events: none; /* Tıklama olaylarını engellemek için */
+}
+
+
+body {
+    z-index: 15;
+    height: 100%;
+    margin: 0;
+    user-select: none;
+    -webkit-user-select: none;
+    -moz-user-select: none; 
+    -ms-user-select: none;
+    cursor: default;
+    display: flex;
+    align-items: center;
+    overscroll-behavior: none;
+    flex-direction: column;
+} 
+
+.main-wrapper {
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 90vw;
+    height: 100vh;
+}
+
+.profile-wrapper {
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100vw;
+    height: 30rem;
+    gap: 1rem;
+}
+
+.profile {
+    border-radius: 100rem;
+    background: url("https://scontent.fadb6-1.fna.fbcdn.net/v/t1.6435-9/34963467_10214318005757558_3310976239648374784_n.jpg?_nc_cat=104&ccb=1-7&_nc_sid=1d70fc&_nc_ohc=Th8-qXYTvHYQ7kNvgHfrghK&_nc_zt=23&_nc_ht=scontent.fadb6-1.fna&_nc_gid=AFkiTebV-F2Rr7mokSgSZmV&oh=00_AYC59rYL7fOzT2STa7ExaahSZmukbQyVXjUrWg8fYnWB0w&oe=67487DC5");
+    background-position: center;
+    box-shadow: inset 0 8px 12px rgba(0, 0, 0, 0.3); /* İç gölge ayarı */
+    background-size: cover;
+    aspect-ratio: 1 / 1;
+    width: 12rem;
+    filter: drop-shadow(0px 0px 16px rgba(60, 60, 60, 0.4));
+}
+
+.name-wrapper {
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 95vw;
+}
+
+.name {
+    margin: 0;
+    font-weight: 600;
+    font-size: 3rem;
+    color: #fff;
+    text-align: center;
+    text-shadow: 0px 0px 12px rgba(0, 0, 0, 0.4)
+}
+
+@media (max-width: 768px) { /* 768px altındaki ekranlar için */
+    .name {
+        font-size: 2.4rem; /* Mobilde font boyutu */
+    }
+}
+
+.profession {
+    line-height: 95%;
+    margin: 0;
+    margin-top: 0.4rem;
+    font-weight: 400;
+    font-size: 1.4rem;
+    color: rgba(255, 255, 255, 0.7);
+    text-align: center;
+    text-shadow: 0px 0px 12px rgba(0, 0, 0, 0.4)
+}
+
+.social-wrapper {
+    margin: 0;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    width: 100vw;
+    gap: 1.4rem;
+}
+
+.social {
+    aspect-ratio: 1 / 1;
+    width: 4rem;
+    border-radius: 100%;
+    background-color: #fff;
+    background: #fff;
+    filter: drop-shadow(0px 0px 6px rgb(60, 60, 60));
+    transition: 0.16s ease-out;
+}
+
+.social:hover {
+    transform: scale(1.1);
+}
+
+.social:active {
+    transform: scale(0.9);
+}
+
+.instagram {
+    background: url(img/instagram.png);
+    background-position: center;
+    background-size: cover;
+}
+
+.facebook {
+    background: url(img/facebook.png);
+    background-position: center;
+    background-size: cover;
+}
+
+.section1 {
+    flex: 0 0 100vh; /* Tam yükseklik */
+    display: flex; 
+    align-items: center;
+    justify-content: center;
+}
+
+.section2 {
+    max-width: 680px;
+    display: flex; 
+    align-items: center; /* İçeriği yukarı hizala */
+    justify-content: center; 
+    height: auto !important;
+    width: 100vw;
+    flex-direction: column;
+}
+
+.innermain-wrapper {
+    height: 80vh;
+    display: flex;
+    flex-direction: column;
+    gap: -1rem;
+}
+
+
+/* Genel Zaman Çizelgesi */
+.timeline {
+    position: relative;
+    width: 90%;
+    max-width: 600px;
+    margin: 2rem auto;
+    padding: 0;
+    color: #fff;
+}
+
+h2 {
+    text-align: center;
+    font-size: 2rem;
+    margin-bottom: -0.8rem;
+}
+
+/* Zaman Çizelgesi Dikey Çizgisi */
+.timeline::before {
+    content: '';
+    position: absolute;
+    top: 110px;
+    left: 30px;
+    width: 4px;
+    height: calc(100% - 220px); /* En üstteki daire boşluğuna göre ayarlandı */
+    background-color: #555;
+    border-radius: 100rem;
+}
+
+/* Zaman Çizelgesi Elemanları */
+.timeline-item {
+    display: flex;
+    align-items: center;
+    position: relative;
+    margin: 1.5rem 0;
+    padding-left: 60px;
+}
+
+.timeline-item {
+    opacity: 0; /* Başlangıçta görünmez */
+    transform: translateY(20px); /* Hafif yukarıda duracak */
+    transition: opacity 0.5s ease, transform 0.5s ease; /* Geçiş efekti */
+}
+
+.timeline-item.visible {
+    opacity: 1; /* Görünür hale getir */
+    transform: translateY(0); /* Normal konuma döndür */
+}
+
+/* Daire */
+.timeline-circle {
+    width: 20px;
+    height: 20px;
+    background-color: #2195e8;
+    border-radius: 50%;
+    position: absolute;
+    left: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+    border: 3px solid #fff;
+}
+
+/* Yıl ve Detaylar */
+.timeline-content {
+    background-color: #333;
+    padding: 1rem;
+    border-radius: 8px;
+    width: calc(100% - 80px);
+}
+
+.timeline-year {
+    font-weight: bold;
+    font-size: 1.2rem;
+    color: #ddd;
+}
+
+.timeline-details h3 {
+    font-size: 1.1rem;
+    color: #fff;
+}
+
+.timeline-details p {
+    color: rgba(255, 255, 255, 0.8);
+    font-size: 0.9rem;
+}
